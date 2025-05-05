@@ -1,0 +1,26 @@
+# Version control and IDE (never needed in container)
+.git/
+.gitkeep
+
+# Ignore internal Keystone files except the sample content
+.keystone/*
+!.keystone/sample/**
+.keystone-image/
+
+# Local notes and non-build content (not part of the image)
+drafts/
+research/
+
+# Output and temporary artifacts
+artifacts/
+*.aux
+*.log
+*.out
+*.pdf
+*.toc
+
+# OS-specific clutter
+.DS_Store
+
+# Sensitive or unused config
+.env
