@@ -1,0 +1,14 @@
+services:
+  keystone:
+    image: lex57ukr/keystone
+    network_mode: none
+    working_dir: /keystone
+    volumes:
+      - ../appendix:/keystone/appendix:ro
+      - ../artifacts:/keystone/artifacts
+      - ../assets:/keystone/assets:ro
+      - ../chapters:/keystone/chapters:ro
+      - ../pandoc.yaml:/keystone/.pandoc/metadata/user-metadata.yaml:ro
+      - ../publish.txt:/keystone/publish.txt:ro
+    env_file:
+      - ../.env
