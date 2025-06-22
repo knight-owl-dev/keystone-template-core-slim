@@ -1,0 +1,8 @@
+# exclude all files in the artifacts directory except for .gitkeep
+/artifacts/*
+!/artifacts/.gitkeep
+
+.DS_Store
+
+# IDE files
+.vscode/
