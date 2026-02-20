@@ -1,0 +1,4 @@
+# .gitattributes
+
+# Ensure all text files are stored in LF only
+* text=auto

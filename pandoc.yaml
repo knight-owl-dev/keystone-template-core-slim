@@ -1,0 +1,152 @@
+---
+# Keystone-generated Pandoc metadata file
+# See: https://pandoc.org/MANUAL.html#variables for more details
+
+# The title of your book
+#
+# This is the main title of your book, which will appear on the cover and in metadata.
+# It should be a descriptive title that reflects the content of your book.
+#
+title: Keystone
+
+# The subtitle of your book
+#
+# This is an optional subtitle that provides additional context or information about your book.
+# It will appear on the cover and in metadata. Leave empty if you don't want a subtitle.
+#
+subtitle: The sample book using the Keystone project
+
+# The author of your book
+#
+# This is the name of the author or organization responsible for the book.
+# It will appear on the cover and in metadata. You can include multiple authors
+# by separating them with commas.
+#
+author: Knight Owl LLC
+
+# The date of your book
+#
+# This is the publication date of your book. It can be a specific date or a keyword.
+#
+# Accepted values:
+# - auto: Automatically set to the current date when building the book
+# - disabled: Do not include a date in the book
+# - any date representing text, e.g., March 30, 2025
+#
+date: auto
+
+# The language (culture) of your book
+#
+# This sets the main document language, affecting metadata, chapter names, hyphenation,
+# and language-specific behavior in LaTeX, EPUB, and HTML.
+#
+# Use standard culture codes, e.g., en, en-US, en-CA, uk, uk-UA, de, fr, etc.
+#
+lang: en-US
+
+# The footer copyright text
+#
+# This is the copyright text that will appear in the footer of your book.
+# It can be a specific text or a keyword.
+#
+# Accepted values:
+# - auto: Automatically set to the current year and author name
+# - disabled: Do not include a copyright in the footer
+# - any custom text, e.g., © 2025 Jane Doe. All Rights Reserved
+#
+footer-copyright: auto
+
+# A short description of your book
+#
+# This is a brief description of your book, which will be included in metadata.
+# It should be a concise summary of the book's content and purpose.
+# It can span multiple lines, but keep it short and to the point.
+#
+description: |
+  This is a tribute to beginnings.
+  In every language, in every framework, "Hello, world" is the first spark — the moment code speaks back.
+  This sample book is your invitation to begin — to build something real, reproducible, and yours.
+
+# A list of keywords for your book
+#
+# This is a list of keywords or tags that describe the content of your book.
+# They will be included in metadata for indexing or cataloging purposes.
+# You can use any keywords that are relevant to your book.
+#
+keywords:
+  - hello-world
+  - keystone
+  - book
+
+# -- PDF layout (LaTeX) -------------------------------------------------------
+# These map to Pandoc's LaTeX template variables and are passed directly to
+# the PDF engine. Pandoc reads them natively from this file — no scripts or
+# environment variables needed.
+#
+# Reference: https://pandoc.org/MANUAL.html#variables-for-latex
+
+# Paper size for LaTeX (PDF only)
+#
+# This corresponds to LaTeX's `papersize` option (no "paper" suffix).
+#
+# Common values:
+# - letter     (8.5" x 11", US)
+# - a4         (210mm x 297mm, international standard)
+# - a5         (148mm x 210mm, compact book size)
+# - b5         (176mm x 250mm, used in publishing)
+#
+papersize: letter
+
+# Page geometry (margins) for LaTeX
+#
+# Use LaTeX geometry syntax: margin=1in or top=20mm, bottom=25mm, etc.
+#
+# Reference: https://ctan.org/pkg/geometry
+#
+# Common values:
+# - margin=1in                                    (default, good for general documents)
+# - top=20mm, bottom=25mm, left=20mm, right=20mm  (compact, use with a5)
+# - inner=30mm, outer=20mm, top=25mm, bottom=25mm (wider inner margin for binding)
+# - margin=10mm                                   (minimal margin — may clip when printed)
+#
+geometry: margin=1in
+
+# Base font size for LaTeX document
+#
+# Accepted values: 10pt, 11pt, 12pt
+# Default: 11pt
+#
+fontsize: 11pt
+
+# Font family for the main body text (requires XeLaTeX engine)
+#
+# The Keystone font registry generates \setmainfont from this value.
+# Libertine is the default. Comment out to fall back to Latin Modern.
+#
+# Supported values:
+#   - libertine      (Linux Libertine — serif, with Biolinum as sans companion)
+#   - dejavu-serif   (DejaVu Serif)
+#   - dejavu-sans    (DejaVu Sans)
+#   - dejavu-mono    (DejaVu Sans Mono)
+#   - latin-modern   (Latin Modern Roman — the TeX default)
+#
+# Any other value is passed through to the Pandoc template as
+# \usepackage{<value>} — use this for custom LaTeX font packages.
+#
+fontfamily: libertine
+
+# -- EPUB options --------------------------------------------------------------
+
+# The cover image for your book (EPUB only)
+#
+# Path to the cover image file relative to the project root.
+# It should be a valid image format (e.g., PNG, JPG).
+#
+# This maps to Pandoc's `cover-image` metadata field and is used only
+# when building EPUB output. Leaving it empty is safe — the Keystone
+# Lua filter strips empty values so EPUB builds proceed without a cover.
+#
+# Example: ./assets/cover.jpg
+#
+cover-image:
+...
