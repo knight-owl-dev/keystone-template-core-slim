@@ -1,0 +1,8 @@
+{
+  "source": "keystone",
+  "branch": "main",
+  "commit": "ddf8ef070e32c8c6b5ef17679a005c78d9bb173f",
+  "template": "keystone-template-core-slim",
+  "timestamp": "2026-02-22T19:18:07Z",
+  "note": "This file was created by the sync process"
+}
