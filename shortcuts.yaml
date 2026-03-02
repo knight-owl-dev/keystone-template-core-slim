@@ -1,0 +1,32 @@
+# shortcuts.yaml — Named style aliases for Keystone div/span handlers
+#
+# Each entry maps a shortcut name to a handler class and its attributes.
+# Use shortcuts in Markdown the same way you use handler classes:
+#
+#   ::: garamond
+#   This paragraph renders in EB Garamond.
+#   :::
+#
+#   A word in [EB Garamond]{.garamond} inline.
+#
+# Format:
+#   shortcut-name:
+#     class: handler-class
+#     attribute: value
+#
+# Shortcuts can chain — a shortcut's class can reference another shortcut:
+#   garamond:
+#     class: font
+#     family: eb-garamond
+#   small-garamond:
+#     class: garamond
+#     size: small
+#
+# Available handler classes: align, font, dialog, pagebreak, latex-only
+# See .pandoc/filters/divs/ for handler documentation.
+#
+# Example — poem-date as a shortcut over the align handler:
+#   poem-date:
+#     class: align
+#     align: right
+#     style: italic

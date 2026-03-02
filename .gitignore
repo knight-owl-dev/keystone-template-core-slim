@@ -1,0 +1,7 @@
+# build output (created on demand by publish.sh / import.sh)
+/artifacts/
+
+.DS_Store
+
+# IDE files
+.vscode/
