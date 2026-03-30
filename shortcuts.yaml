@@ -1,0 +1,36 @@
+# shortcuts.yaml — Project-specific style aliases
+#
+# Define your own vocabulary on top of Keystone's built-in system shortcuts
+# (align, font, figure, etc.). User shortcuts layer on top of system
+# shortcuts with last-writer-wins — defining a name that matches a system
+# shortcut shadows it; deleting the entry restores the default.
+#
+# Format:
+#   shortcut-name:
+#     class: handler-or-shortcut
+#     interface:
+#       attr-name:
+#         bind: class.handler-attr
+#         default: value
+#
+# Example — a named font preset:
+#   garamond:
+#     class: font
+#     interface:
+#       family:
+#         bind: class.family
+#         default: eb-garamond
+#       size:
+#         bind: class.size
+#       style:
+#         bind: class.style
+#
+# Example — a chain shortcut building on the preset above:
+#   small-garamond:
+#     class: garamond
+#     interface:
+#       size:
+#         bind: class.size
+#         default: small
+#
+# See docs/shortcuts.md for the full interface system reference.

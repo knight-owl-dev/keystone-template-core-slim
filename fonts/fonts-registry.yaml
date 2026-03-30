@@ -1,0 +1,44 @@
+# fonts-registry.yaml — Register custom fonts for PDF and EPUB output
+#
+# Place your .otf font files in this fonts/ directory alongside this file,
+# then add entries below. Keystone will pick them up automatically — the
+# font becomes available as a fontfamily value in pandoc.yaml and as a
+# family value in .font divs/spans.
+#
+# Required fields:
+#   main.file   — Filename of the regular-weight .otf file
+#   css         — Font-family stack for EPUB/HTML. The first quoted value
+#                 becomes the @font-face family name; the rest are fallbacks.
+#                 Uses CSS font-family syntax:
+#                 https://developer.mozilla.org/en-US/docs/Web/CSS/font-family
+#
+# Optional fields:
+#   main.bold        — Bold variant filename
+#   main.italic      — Italic variant filename
+#   main.bold_italic — Bold-italic variant filename
+#   main.path        — Absolute path to font files (default: /keystone/fonts/)
+#   command          — LaTeX command name (auto-generated if omitted)
+#   sans             — Registry key of a sans-serif companion from the same
+#                      type family. When used as the document font, Keystone
+#                      also sets the sans-serif font to this companion.
+#
+# Example — serif with all variants + sans companion:
+#   my-serif:
+#     main:
+#       file: MySerif-Regular.otf
+#       bold: MySerif-Bold.otf
+#       italic: MySerif-Italic.otf
+#       bold_italic: MySerif-BoldItalic.otf
+#     css: '"My Serif", "Georgia", serif'
+#     sans: my-sans
+#
+#   my-sans:
+#     main:
+#       file: MySans-Regular.otf
+#     css: '"My Sans", "Helvetica Neue", sans-serif'
+#
+# Example — minimal single-weight font:
+#   my-display:
+#     main:
+#       file: MyDisplay-Regular.otf
+#     css: '"My Display", "Georgia", serif'

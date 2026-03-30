@@ -1,0 +1,25 @@
+services:
+  keystone:
+    image: ghcr.io/knight-owl-dev/keystone:v2.0.5
+    user: "${DOCKER_UID:-1000}:${DOCKER_GID:-1000}"
+    working_dir: /keystone
+    network_mode: none
+    read_only: true
+    cap_drop:
+      - ALL
+    security_opt:
+      - no-new-privileges:true
+    tmpfs:
+      - /tmp
+    environment:
+      HOME: /tmp
+    volumes:
+      - ../artifacts:/keystone/artifacts
+      - ../assets:/keystone/assets:ro
+      - ../fonts:/keystone/fonts:ro
+      - ../manuscript:/keystone/manuscript:ro
+      - ../pandoc.yaml:/keystone/.pandoc/metadata/user-metadata.yaml:ro
+      - ../publish.txt:/keystone/publish.txt:ro
+      - ../shortcuts.yaml:/keystone/shortcuts.yaml:ro
+    env_file:
+      - ../project.conf
